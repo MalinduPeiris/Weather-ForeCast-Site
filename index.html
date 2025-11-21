@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="assets/js/preDefinedCountries.js"></script>
+</head>
+
+<body>
+
+    <!-- nav section -->
+    <div class="container-fluid">
+        <section id="Home">
+            <div class="row mt-3">
+                <div class="col-lg-4 navLeftPart">
+                    <h1 class="siteTitle alfa-slab-one-regular" id="site_Title">Weather ForeCast</h1>
+                </div>
+                <div class="col-lg-7 navRightPart mt-1">
+                    <input type="search" placeholder="Search Your Location" id="navTxtSearch"
+                        onclick="searchingLocationDetails()">
+                    <button class="btnSearch" onclick="searchingLocationDetails()">Search</button>
+                </div>
+                <div class="col-lg-1">
+                    <button class="btnDarkMode" id="btnDarkModeId" onclick="darkMode()">
+                        <h6 id="btnDarkModeValue" style="margin-top: 5px;">Dark Mode</h6>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- welcome selction and body part -->
+    <div class="container bodyPart">
+        <div class="row mt-5 ">
+            <div class="col-lg-12">
+                <h2 class="welcomeMsg">Good Morning</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="containerSearchMainInfo">
+                    <div class="row">
+                        <div class="conainerMain1 mt-3">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p class="locationMainCard" id="mainSearchedPlace">Sri lanka , Panadura</p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3 mainCardDay">
+                        <div class="col-lg-4">
+                            <h3 style="font-weight: 600;" id="mainSearchedDay">Sunday</h3>
+                            <h6 style="font-weight: 500;" id="mainSearchedDate">04 Aug , 2024</h6>
+                        </div>
+                        <div class="col-lg-8"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2"></div>
+
+                        <div class="col-lg-6">
+                            <img class="mainCardImage" id="setWeatherIcon" src="assets/img/scattered-thunderstorms.png"
+                                alt="Weather image check your connection">
+                        </div>
+
+                        <div class="col-lg-3 mainCardDetails">
+                            <h1 class="" id="mainSerchedCelsius">13°C</h1>
+                            <h4 style="color: rgb(76, 74, 74);">/24°C</h4>
+                            <p id="mainSearchedCondition">Fog</p>
+                            <p id="mainSearchedFeelsLike">Feels Like 31°</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 containerHighLightInfo">
+                <section id="Highlight">
+                    <div class="row mt-4">
+                        <h1 class="highlightTitle">Today's Highlight</h1>
+                    </div>
+
+                    <div class="container">
+                        <div class="row mt-3">
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-wind highlightInfoIcon"></i>
+                                    <h6>Wind Staus</h6>
+                                </div>
+                                <div class="mt-3" style="display: flex; justify-content: center;">
+                                    <h4 class="hightlightCommonThing1" id="searchedWindValue">7.90</h4>
+                                    <p class="hightlightCommonThing2">km/h</p>
+                                </div>
+
+                                <div style="display: flex;justify-content: center;">
+                                    <p class="hightlightCommonThing3">9.00 AM</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-tint highlightInfoIcon"></i>
+                                    <h6>Humidity</h6>
+                                </div>
+                                <div class="mt-3" style="display: flex; justify-content: center;margin-left: 37%;">
+                                    <h4 class="hightlightCommonThing1" id="searchedHumidityValue">85</h4>
+                                    <p class="hightlightCommonThing2"> %</p>
+                                </div>
+
+                                <div style="display: flex;justify-content: center;">
+                                    <p class="hightlightCommonThing4">Humidity is Good</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-5 commonHighlightCards">
+                                <div class="div" style="display: flex;">
+                                    <div class="row mt-5">
+                                        <div class="col-lg-4">
+                                            <img class="sunRiseSetImage" src="assets/img/sunrise.png"
+                                                alt="sunrise Image">
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-6" style="text-align: start;">
+                                            <h6 class="sunriseset">Sunrise</h6>
+                                            <h4 id="searchedSunRiseTime">4.50 AM</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-sun highlightInfoIcon"></i>
+                                    <h6>UV Index</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-9">
+                                        <div class="mt-3" style="display: flex; justify-content: end;">
+                                            <h4 class="hightlightCommonThing1" id="serachedUvValue">4</h4>
+                                            <p class="hightlightCommonThing2">UV</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-9">
+                                        <div style="display: flex;justify-content: end;">
+                                            <p class="hightlightCommonThing5">Moderate UV</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-eye highlightInfoIcon"></i>
+                                    <h6>Visibility</h6>
+                                </div>
+                                <div class="mt-3" style="display: flex; justify-content: center;margin-left: 37%;">
+                                    <h4 class="hightlightCommonThing1" id="searchedVisibilityValue">5</h4>
+                                    <p class="hightlightCommonThing2">km</p>
+                                </div>
+
+                                <div style="display: flex;justify-content: center;">
+                                    <p class="hightlightCommonThing6" id="searchedTimeValue">9.00 AM</p>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-5 commonHighlightCards">
+                                <div class="div" style="display: flex;">
+                                    <div class="row mt-5">
+                                        <div class="col-lg-4">
+                                            <img class="sunRiseSetImage" src="assets/img/sunset.png"
+                                                alt="sunrise Image">
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-6" style="text-align: start;">
+                                            <h6 class="sunriseset">Sunset</h6>
+                                            <h4 id="searchedSunSetTime">6.45 PM</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-sun highlightInfoIcon"></i>
+                                    <h6>Pressure</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-9">
+                                        <div class="mt-4" style="display: flex; justify-content: end;">
+                                            <h4 class="hightlightCommonThing1" id="searchedPressureValue">1016</h4>
+                                            <p class="hightlightCommonThing2">hPa</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-3 commonHighlightCards">
+                                <div class="mt-3" style="display: flex;">
+                                    <i class="fas fa-eye highlightInfoIcon"></i>
+                                    <h6>Cloud Cover</h6>
+                                </div>
+                                <div class="mt-4" style="display: flex; justify-content: center;margin-left: 37%;">
+                                    <h4 class="hightlightCommonThing" id="searchedCloudCoverValue">100</h4>
+                                    <p class="hightlightCommonThing2">%</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- other Country Cards  -->
+        <div class="row mt-5 ">
+            <div class="col-lg-5">
+                <section id="Countries">
+                    <div class="otherCountriesContainer">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2 class="otherCountriesTitle mt-4">Other Countries</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1 mt-4"></div>
+
+                            <div class="col-lg-10">
+                                <div class="contryCards mt-4">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="otherCountryName">India</p>
+                                                <h5 class="otherCountryLocation">Hyradbhad</h5>
+                                                <p class="otherCountryCondition">Sunny</p>
+                                            </div>
+
+                                            <div class="col-lg-4 mt-4" style="text-align: center;">
+                                                <img class="countryImage" id="hydrabadImg" src="assets/img/sun.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="contryCardTempDetails mt-4">
+                                                    <p class="countryCardTempValue" id="hydrabadTemp">32°C</p>
+                                                    <p class="countryCardTemp">/24°C</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mt-4"></div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-1 mt-4"></div>
+
+                            <div class="col-lg-10">
+                                <div class="contryCards mt-4">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="otherCountryName">Japan</p>
+                                                <h5 class="otherCountryLocation">Tokyo</h5>
+                                                <p class="otherCountryCondition">Cloudy</p>
+                                            </div>
+
+                                            <div class="col-lg-4 mt-4" style="text-align: center;">
+                                                <img class="countryImage" id="tokyoImg" src="assets/img/sun.png" alt="">
+                                            </div>
+
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="contryCardTempDetails mt-4">
+                                                    <p class="countryCardTempValue" id="tokyoTemp">18°C</p>
+                                                    <p class="countryCardTemp">/24°C</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mt-4"></div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1 mt-4"></div>
+
+                            <div class="col-lg-10">
+                                <div class="contryCards mt-4">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="otherCountryName">Australia</p>
+                                                <h5 class="otherCountryLocation">Sydney</h5>
+                                                <p class="otherCountryCondition">Sunny</p>
+                                            </div>
+
+                                            <div class="col-lg-4 mt-4" style="text-align: center;">
+                                                <img class="countryImage" id="sydneyImg" src="assets/img/sun.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="contryCardTempDetails mt-4">
+                                                    <p class="countryCardTempValue" id="sydneyTemp">30°C</p>
+                                                    <p class="countryCardTemp">/24°C</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mt-4"></div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1 mt-4"></div>
+
+                            <div class="col-lg-10">
+                                <div class="contryCards mt-4">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="otherCountryName">Canada</p>
+                                                <h5 class="otherCountryLocation">Toronto</h5>
+                                                <p class="otherCountryCondition">Snow</p>
+                                            </div>
+
+                                            <div class="col-lg-4 mt-4" style="text-align: center;">
+                                                <img class="countryImage" id="canadaImg" src="assets/img/sun.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="contryCardTempDetails mt-4">
+                                                    <p class="countryCardTempValue" id="canadaTemp">-2°C</p>
+                                                    <p class="countryCardTemp">/24°C</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mt-4"></div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-1 mt-4"></div>
+
+                            <div class="col-lg-10">
+                                <div class="contryCards mt-4">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="otherCountryName">United States</p>
+                                                <h5 class="otherCountryLocation">New York</h5>
+                                                <p class="otherCountryCondition">Windy</p>
+                                            </div>
+
+                                            <div class="col-lg-4 mt-4" style="text-align: center;">
+                                                <img class="countryImage" id="newyorkImg" src="assets/img/sun.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="contryCardTempDetails mt-4">
+                                                    <p class="countryCardTempValue" id="newyorkTemp">10°C</p>
+                                                    <p class="countryCardTemp">/24°C</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mt-4"></div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <!-- 10 day forecastInfo -->
+            <div class="col-lg-6 ">
+                <section id="Forecast">
+                    <div class="forecastInfo">
+                        <div class="row mt-4">
+                            <h1 class="forcastTitle mt-3">10 Day Forecast</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="container">
+                                <div class="row mt-5 ">
+                                    <div class="col-lg-5 forecastCardsSet1">
+
+                                        <div class="col-lg-4 mt-3">
+                                            <p class="forcastCardDay">Today</p>
+                                        </div>
+                                        <div class="col-lg-4 mt-2" style="text-align: center;">
+                                            <img class="forcastCardImage" src="assets/img/sun.png" alt="">
+                                        </div>
+                                        <div class="col-lg-4 mt-1">
+                                            <div class="forcastCardtempDetails mt-4">
+                                                <p class="forcastCardCelsius">32°C</p>
+                                                <p class="forcastCardTemp">/24°C</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-1"></div>
+
+                                    <div class="col-lg-5 forecastCardsSet2">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-4">
+                                                <p class="forcastCardDay">Moday</p>
+                                            </div>
+                                            <div class="col-lg-4" style="text-align: center;">
+                                                <img class="forcastCardImage2" src="assets/img/sun.png" alt="">
+                                            </div>
+                                            <div class="col-lg-4 mt-1">
+                                                <div class="forcastCardtempDetails mt-4">
+                                                    <p class="forcastCardCelsius2">27°C</p>
+                                                    <p class="forcastCardTemp2">/24°C</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-5 forecastCardsSet1">
+
+                                        <div class="col-lg-4 mt-3">
+                                            <p class="forcastCardDay">Tuseday</p>
+                                        </div>
+                                        <div class="col-lg-4 mt-2" style="text-align: center;">
+                                            <img class="forcastCardImage" src="assets/img/sun.png" alt="">
+                                        </div>
+                                        <div class="col-lg-4 mt-1">
+                                            <div class="forcastCardtempDetails mt-4">
+                                                <p class="forcastCardCelsius">28°C</p>
+                                                <p class="forcastCardTemp">/24°C</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-1"></div>
+
+                                    <div class="col-lg-5 forecastCardsSet2">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-4">
+                                                <p class="forcastCardDay">Thursday</p>
+                                            </div>
+                                            <div class="col-lg-4" style="text-align: center;">
+                                                <img class="forcastCardImage2" src="assets/img/sun.png" alt="">
+                                            </div>
+                                            <div class="col-lg-4 mt-1">
+                                                <div class="forcastCardtempDetails mt-4">
+                                                    <p class="forcastCardCelsius2">29°C</p>
+                                                    <p class="forcastCardTemp2">/24°C</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-lg-5 forecastCardsSet1">
+
+                                        <div class="col-lg-4 mt-3">
+                                            <p class="forcastCardDay">Friday</p>
+                                        </div>
+                                        <div class="col-lg-4 mt-2" style="text-align: center;">
+                                            <img class="forcastCardImage" src="assets/img/sun.png" alt="">
+                                        </div>
+                                        <div class="col-lg-4 mt-1">
+                                            <div class="forcastCardtempDetails mt-4">
+                                                <p class="forcastCardCelsius">27°C</p>
+                                                <p class="forcastCardTemp">/24°C</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-1"></div>
+
+                                    <div class="col-lg-5 forecastCardsSet2">
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-4">
+                                                <p class="forcastCardDay">Saturday</p>
+                                            </div>
+                                            <div class="col-lg-4" style="text-align: center;">
+                                                <img class="forcastCardImage2" src="assets/img/sun.png" alt="">
+                                            </div>
+                                            <div class="col-lg-4 mt-1">
+                                                <div class="forcastCardtempDetails mt-4">
+                                                    <p class="forcastCardCelsius2">30°C</p>
+                                                    <p class="forcastCardTemp2">/24°C</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <section id="Map">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-10" style="display: flex; justify-content: center;">
+
+                        <div class="map">
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63397.333699821735!2d79.89441627694708!3d6.729120196223118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae24616c169e7c3%3A0xd21e80c970651d56!2sPanadura!5e0!3m2!1sen!2slk!4v1680951005127!5m2!1sen!2slk"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-1"></div>
+                </div>
+            </section>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+            <footer
+                style="margin-top: 10rem; background-color: #232323; width: 100%; height: 15rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <ul class="nav border-bottom pb-3 mb-3"
+                    style="justify-content: center; text-align: center; width: 100%;">
+                    <li class="nav-item"><a href="#Home" class="nav-link px-2 footeritems">Home</a></li>
+                    <li class="nav-item"><a href="#Home" class="nav-link px-2 footeritems">Search
+                            Location</a></li>
+                    <li class="nav-item"><a href="#Home" class="nav-link px-2 footeritems">Highlights</a></li>
+                    <li class="nav-item"><a href="#Forecast" class="nav-link px-2 footeritems">10 Day
+                            Forecast</a></li>
+                    <li class="nav-item"><a href="#Countries" class="nav-link px-2 footeritems">Other
+                            Countries</a></li>
+                    <li class="nav-item"><a href="#Map" class="nav-link px-2 footeritems">View Map</a>
+                    </li>
+                </ul>
+                <div class="row mt-4">
+                    <div class="col-lg-12">
+                        <p style="color: aliceblue; text-align: center;">© 2025 Malindu Sansika Peiris
+                            Weather Forecast Site, Inc</p>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

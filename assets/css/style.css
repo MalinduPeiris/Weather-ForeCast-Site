@@ -1,0 +1,399 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* 
+background: linear-gradient(270deg,
+             #17b59a 10%,
+            #0dba22ad 100%); */
+
+.welcomeMsg {
+    font-weight: 700;
+    font-size: 130%;
+}
+
+
+
+.navLeftPart {
+    text-align: start;
+}
+
+.navRightPart {
+    align-items: center;
+    /* justify-items: center;  */
+    text-align: center;
+}
+
+.siteTitle {
+    color: white;
+    margin-left: 5%;
+}
+
+.siteTitle:hover {
+    transform: translatex(7px);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.btnSearch {
+    width: 11%;
+    height: 82%;
+    color: white;
+    margin-left: 2%;
+    background-color: black;
+    border-color: white;
+    border-radius: 20px;
+}
+
+.btnSearch:hover {
+    transform: translatey(-4px);
+    transition: all 0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 100, 130);
+
+}
+
+.btnDarkMode {
+    width: 7rem;
+    height: 82%;
+    color: white;
+    margin-left: -42%;
+    background-color: black;
+    border-color: white;
+    border-radius: 20px;
+}
+
+.btnDarkMode:hover {
+    transform: translatey(-4px);
+    transition: all 0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 100, 130);
+
+}
+
+#navTxtSearch {
+    width: 35%;
+    height: 85%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border: 0px;
+}
+
+#navTxtSearch:hover {
+    transform: translatey(-4px);
+    transition: all 0.3s ease-in-out;
+}
+
+.bodyPart {
+    margin-top: 5%;
+}
+
+.containerSearchMainInfo {
+    background-color: #232323;
+    border-radius: 13px;
+}
+
+.containerSearchMainInfo:hover {
+    transform: translatey(-15px);
+    box-shadow: #e3e3e34d 10px 10px 50px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.conainerMain1 {
+    background-color: #373636;
+    border-radius: 13px;
+    width: 42%;
+    height: 35px;
+    margin-left: 5%;
+    display: flex;
+    padding: 0px 15px 0 20px;
+    align-items: center;
+
+}
+
+.locationMainCard {
+    text-align: end;
+    font-weight: 600;
+    margin-left: 10%;
+    margin-top: 7%;
+    align-content: center;
+}
+
+.mainCardDay {
+    margin-left: 1%;
+}
+
+.mainCardDetails {
+    text-align: end;
+}
+
+.mainCardImage {
+    width: 64%;
+    height: auto;
+    margin-left: 14%;
+}
+
+#mainSerchedCelsius {
+    font-weight: 600;
+}
+
+#mainSearchedCondition {
+    font-size: 119%;
+    font-weight: 600;
+    margin-top: 45px;
+    text-align: start;
+}
+
+#mainSearchedFeelsLike {
+    font-size: 110%;
+    font-weight: 500;
+    margin-top: -12px;
+    text-align: start;
+}
+
+.containerHighLightInfo {
+    background-color: #232323;
+    border-radius: 13px;
+    margin-left: 3%;
+    width: 53%;
+    height: 37.3rem;
+}
+
+.containerHighLightInfo:hover {
+    transform: translatey(-15px);
+    box-shadow: #e3e3e34d 10px 10px 50px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.highlightTitle {
+    font-weight: 700;
+    font-size: 130%;
+    margin-left: 2%;
+}
+
+.commonHighlightCards {
+    background-color: #373636;
+    border-radius: 13px;
+    margin-right: 10px;
+}
+
+.highlightInfoIcon {
+    margin-left: 10%;
+    margin-right: 7%;
+}
+
+.hightlightCommonThing1 {
+    font-weight: 700;
+    margin-left: 25%;
+}
+
+.hightlightCommonThing2 {
+    color: rgb(171, 172, 172);
+    margin-left: 5%;
+    margin-top: 4%;
+}
+
+.hightlightCommonThing3 {
+    color: rgb(171, 172, 172);
+    margin-left: 48%;
+}
+
+.hightlightCommonThing4 {
+    color: rgb(171, 172, 172);
+}
+
+.sunRiseSetImage {
+    width: 90%;
+    margin-left: 19px;
+}
+
+.sunriseset {
+    color: #aca6a6;
+}
+
+.hightlightCommonThing5 {
+    color: rgb(171, 172, 172);
+}
+
+.hightlightCommonThing6 {
+    color: rgb(171, 172, 172);
+    margin-left: 42%;
+}
+
+.otherCountriesTitle {
+    font-weight: 700;
+    font-size: 130%;
+    margin-left: 4%;
+}
+
+.otherCountriesContainer {
+    background-color: #232323;
+    border-radius: 13px;
+    margin-top: -16rem;
+    height: 55rem;
+}
+
+.otherCountriesContainer:hover {
+    transform: translatey(-15px);
+    box-shadow: #e3e3e34d 10px 10px 50px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.forecastInfo {
+    background-color: #232323;
+    border-radius: 13px;
+    margin-left: 4%;
+    width: 110%;
+    height: 34.5rem;
+}
+
+.forecastInfo:hover {
+    transform: translatey(-15px);
+    box-shadow: #e3e3e34d 10px 10px 50px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.forcastTitle {
+    font-weight: 700;
+    font-size: 130%;
+    margin-left: 4%;
+}
+
+.contryCards {
+    background-color: #373636;
+    border-radius: 13px;
+    margin-right: 10px;
+}
+
+.otherCountryName {
+    color: #918d8d;
+    font-size: 1.1rem;
+}
+
+.otherCountryLocation {
+    margin-top: -9%;
+    font-weight: 600;
+}
+
+.otherCountryCondition {
+    color: #b8b4b4;
+}
+
+.countryImage {
+    width: 75%;
+}
+
+.countryCardTempDetails {
+    display: flex;
+    text-align: end;
+}
+
+.countryCardTempValue {
+    font-size: 1.6rem;
+}
+
+.countryCardTemp {
+    color: #918d8d;
+    font-size: 1rem;
+    margin-top: 8%;
+    padding: 0px 0px 0px 10px;
+}
+
+.forecastCardsSet1 {
+    background-color: #373636;
+    margin-left: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 6rem;
+}
+
+.forecastCardsSet2 {
+    background-color: #373636;
+    border-radius: 1rem;
+    margin-left: -2rem;
+}
+
+.forcastCardDay {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 0.4rem;
+}
+
+.forcastCardCelsius {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.forcastCardTemp {
+    color: #918d8d;
+    margin-left: 0.7rem;
+    margin-top: 0.8rem;
+}
+
+.forcastCardImage {
+    margin-left: -2rem;
+    width: 80%;
+}
+
+.forcastCardtempDetails {
+    display: flex;
+    margin-left: -.8rem;
+}
+
+.forcastCardCelsius2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-left: -1rem;
+}
+
+.forcastCardTemp2 {
+    color: #918d8d;
+    margin-left: 0.7rem;
+    margin-top: 0.8rem;
+}
+
+.forcastCardImage2 {
+    margin-top: 0.8rem;
+    width: 100%;
+    margin-left: -1rem;
+}
+
+.footeritems {
+    color: #999696;
+    padding: 5px 20px;
+    font-size: 1rem;
+    padding: 0px 0px 20px 0px;
+    margin-left: 2rem;
+
+}
+
+.footeritems:hover {
+    display: flex;
+    color: #ffffff;
+    background: linear-gradient(270deg,
+            #17b59a 10%,
+            #0dba22ad 100%);
+    border-radius: 15px;
+    align-content: center;
+
+    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 0 0 25px rgba(234, 80, 3, 0.6);
+    transform: translatey(-2px);
+}
+
+
+.map {
+    width: 90%;
+    margin-top: 3rem;
+    height: 30rem;
+}
+.map:hover{
+    transform: translatey(-5px);
+    box-shadow: #e3e3e388 10px 10px 20px 20px;
+    transition: all 0.3s ease-in-out;
+}

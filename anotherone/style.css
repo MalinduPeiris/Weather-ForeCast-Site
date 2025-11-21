@@ -1,0 +1,117 @@
+.nav_row {
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    width: auto;
+    height: 80px;
+}
+
+.nav_left_div {
+    display: flex;
+    gap: 20px;
+    width: 70%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.nav_left_div img {
+    margin-left: -28px;
+    margin-top: -10px;
+    width: 150px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_left_div h1 {
+    justify-content: start;
+    color: rgb(65, 71, 164);
+    font-weight: 800;
+    font-size: 33px;
+    margin: 0;
+}
+
+.navBtnSearch {
+    width: 20%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: #CBD99B;
+}
+
+.nav_right_div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+    height: 80px;
+}
+
+.nav_right_div input {
+    margin-right: 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 5px 4px 0px 0px rgb(73, 73, 73);
+    width: 70%;
+    height: 40px;
+    padding: 5px 10px;
+}
+
+.btnSearch {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  /* align-items: center;
+  justify-items: center; */
+  width: 28%;
+  height: 50%;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.btnSearch:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.btnSearch:hover {
+  color: #fff;
+}
+
+.btnSearch:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.btnSearch:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.btnSearch:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+ 
+.left_de {
+    font-weight: 300;
+    text-align: center;
+}
