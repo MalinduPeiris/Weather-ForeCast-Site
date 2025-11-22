@@ -53,8 +53,60 @@ background: linear-gradient(270deg,
     background-color: rgb(0, 100, 130);
 
 }
+#btnDarkModeValue{
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+.theme-checkbox {
+  --toggle-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 5.25em;
+  height: 2.5em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+}
 
-.btnDarkMode {
+.theme-checkbox::before {
+  content: "";
+  width: 1.8em;
+  height: 1.8em;
+  position: absolute;
+  top: 0.35em;
+  left: 0.35em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 1.8em - 0.35em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+/* .btnDarkMode {
     width: 7rem;
     height: 82%;
     color: white;
@@ -70,7 +122,7 @@ background: linear-gradient(270deg,
     color: rgb(255, 255, 255);
     background-color: rgb(0, 100, 130);
 
-}
+} */
 
 #navTxtSearch {
     width: 35%;
@@ -247,7 +299,7 @@ background: linear-gradient(270deg,
     border-radius: 13px;
     margin-left: 4%;
     width: 110%;
-    height: 34.5rem;
+    height: 37.5rem;
 }
 
 .forecastInfo:hover {
@@ -319,30 +371,31 @@ background: linear-gradient(270deg,
 }
 
 .forcastCardDay {
-    font-weight: 600;
-    font-size: 1.3rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     margin-top: 0.4rem;
 }
 
 .forcastCardCelsius {
     font-weight: 600;
     font-size: 1.8rem;
+    margin-right: -1rem;
 }
 
 .forcastCardTemp {
     color: #918d8d;
-    margin-left: 0.7rem;
+    margin-left: 1.3rem;
     margin-top: 0.8rem;
 }
 
 .forcastCardImage {
-    margin-left: -2rem;
+    margin-left: -0.2rem;
     width: 80%;
 }
 
 .forcastCardtempDetails {
     display: flex;
-    margin-left: -.8rem;
+    margin-left: -.5rem;
 }
 
 .forcastCardCelsius2 {
