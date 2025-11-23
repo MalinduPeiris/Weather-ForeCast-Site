@@ -13,18 +13,12 @@ async function searchingLocationDetails() {
 
     let searchedValue = document.getElementById("navTxtSearch").value.toLowerCase();
 
-    /*  My way to find the api for related searching location 
-    let location = "http://api.weatherapi.com/v1/current.json?key=8e0f6dfa5af14b779b395844251611&q=";
-    location += searchedValue + "&aqi=no";
-
-    let forecastLocation = "http://api.weatherapi.com/v1/forecast.json?key=8e0f6dfa5af14b779b395844251611&q="
-    forecastLocation += searchedValue + "&days=7"
-    */
+   
 
     let apiKey = "8e0f6dfa5af14b779b395844251611";
 
-    let todayWeatherApi = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchedValue}&aqi=no`;
-    let forecastWeatherApi = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`;
+    let todayWeatherApi = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchedValue}&aqi=no`;
+    let forecastWeatherApi = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`;
 
     await fetch(todayWeatherApi)
         .then(res => res.json())
